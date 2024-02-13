@@ -9,6 +9,7 @@
             <li>Stato: {{ $project->status }}</li>
             <li>Data Inizio: {{ $project->start_date }}</li>
             <li>Descrizione: {{ $project->description }}</li>
+            <li>Tipologia: {{ $project->type?->title ?: 'Nessuna Tipologia' }}</li>
         </ul>
         <a class="btn btn-dark" href="{{ route('admin.projects.index') }}">Torna alla lista</a>
 
