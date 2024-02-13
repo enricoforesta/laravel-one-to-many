@@ -28,22 +28,6 @@
                 @enderror
             </div>
             <div class="mb-3">
-                <label class="form-label">Linguaggio utilizzato</label>
-                <input type="text" class="form-control @error('language') is-invalid @enderror" name="language" required
-                    value="{{ old('language') }}">
-                @error('language')
-                    <div class="alert alert-danger">{{ $message }}</div>
-                @enderror
-            </div>
-            <div class="mb-3">
-                <label class="form-label">Frameworks utilizzati</label>
-                <input type="text" class="form-control @error('frameworks') is-invalid @enderror" name="frameworks"
-                    value="{{ old('frameworks') }}">
-                @error('frameworks')
-                    <div class="alert alert-danger">{{ $message }}</div>
-                @enderror
-            </div>
-            <div class="mb-3">
                 <label class="form-label">Stato</label>
                 <input type="text" class="form-control @error('status') is-invalid @enderror" name="status"
                     value="{{ old('status') }}">

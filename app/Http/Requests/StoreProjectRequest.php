@@ -24,10 +24,8 @@ class StoreProjectRequest extends FormRequest
     {
         return [
             'title' => ['required', 'unique:projects,title', 'max:50'],
-            'status' => 'required|max:20',
+            'status' => 'nullable|max:20',
             'description' => 'nullable',
-            'frameworks' => 'nullable|max:40',
-            'language' => 'nullable|max:30',
             'start_date' => 'required',
             // 'slug' => 'required',
         ];
@@ -40,8 +38,6 @@ class StoreProjectRequest extends FormRequest
             'title.max' => 'Il titolo non può superare i :max caratteri.',
             'status.required' => 'Lo stato è obbligatorio.',
             'status.max' => 'Lo stato non può superare i :max caratteri.',
-            'language.required' => 'Il linguaggio è obbligatorio.',
-            'language.max' => 'Il linguaggio non può superare i :max caratteri.',
             'start_date.required' => 'La data è obbligatoria.',
         ];
     }

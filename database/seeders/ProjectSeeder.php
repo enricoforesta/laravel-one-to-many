@@ -17,7 +17,6 @@ class ProjectSeeder extends Seeder
             $project->title = $faker->sentence(3);
             $project->description = $faker->text(50);
             $project->slug = Str::of($project->title)->slug('-');
-            $project->language = $faker->sentence(1);
             $project->start_date = $faker->date('Y_m_d');
             $project->save();
         }
