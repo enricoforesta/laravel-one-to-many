@@ -16,7 +16,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Boolfolio'),
+    'name' => env('APP_NAME', 'Laravel Boolfolio - Project Typology'),
 
     /*
     |--------------------------------------------------------------------------
