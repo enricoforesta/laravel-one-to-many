@@ -28,6 +28,16 @@
                 @enderror
             </div>
             <div class="mb-3">
+                <label class="form-label">Tipologia Progetto</label>
+                <select class="form-select" aria-label="Default select example" name="type_id">
+                    <option value="" selected>Seleziona la tipologia</option>
+                    @foreach ($types as $type)
+                        <option value="{{ $type->id }}" @if (old('type_id') == $type->id) selected @endif>
+                            {{ $type->title }}</option>
+                    @endforeach
+                </select>
+            </div>
+            <div class="mb-3">
                 <label class="form-label">Stato</label>
                 <input type="text" class="form-control @error('status') is-invalid @enderror" name="status"
                     value="{{ old('status') }}">
